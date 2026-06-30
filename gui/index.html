@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="window-target" content="_top">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="google" content="notranslate">
+<title>SyncTool</title>
+
+<link rel="shortcut icon" href="images/ico.png">
+<link rel="stylesheet" href="styles/uigg.css">
+<link rel="stylesheet" href="styles/styles.css">
+
+<script type="text/javascript" src="/eel.js"></script>
+<script type="module" src="js/uigg.js"></script>
+</head>
+
+<body>
+<section class="subject">
+    <section class="sider">
+        <div class="list" id="task-list">
+<!--
+            <li>
+                <i class="ico ico-circular-media-play"></i><z class="ico ico-circular-direction-right"></z>
+                <span>任务名</span>
+                <a class="ico ico-alone-top"></a>
+                <a class="ico ico-alone-bottom"></a>
+            </li>
+            <li class="active">
+                <i class="ico ico-circular-media-play"></i><z class="ico ico-circular-direction-right"></z>
+                <span>任务名</span>
+                <a class="ico ico-alone-top"></a>
+                <a class="ico ico-alone-bottom"></a>
+            </li>
+            <li>
+                <i class="ico ico-circular-media-play"></i><z class="ico ico-circular-direction-right"></z>
+                <span>任务名</span>
+                <a class="ico ico-alone-top"></a>
+                <a class="ico ico-alone-bottom"></a>
+            </li>
+-->
+        </div>
+        <div class="btn-flex">
+            <a class="btn btn-red shadow" onclick="onDeleteTask()"><i class="ico ico-delete"></i><span>删除</span></a>
+            <a class="btn shadow" onclick="onNewTask()"><i class="ico ico-add"></i><span>创建</span></a>
+        </div>
+    </section>
+    <section class="contant">
+        <form class="form set">
+            <li>
+                <input id="task-name" type="text" name="name" placeholder="请输入任务名称">
+                <choice id="source-type" name="type">
+                    <a>选择类型</a>
+                    <choice-list>
+                        <a>文件</a>
+                        <a>文件夹</a>
+                    </choice-list>
+                </choice>
+                <choice id="sync-direction" name="direction">
+                    <a>选择方向</a>
+                    <choice-list>
+                        <a>单向</a>
+                        <a>双向</a>
+                    </choice-list>
+                </choice>
+                <span>自动</span>
+                <o id="auto-enabled" class="checkbox"></o>
+                <input id="auto-delay" class="time" type="text" name="time" placeholder="延迟">
+            </li>
+            <li id="address">
+                <a class="btn btn-submit shadow" onclick="onBrowse()"><i class="ico ico-search"></i><span>浏览</span></a>
+                <input id="source-path" type="text" name="file" placeholder="请选择文件路径" readonly>
+            </li>
+        </form>
+        <div class="goal">
+            <ul id="target-list">
+                <li><span>文件地址</span><a class="ico ico-delete"></a></li>
+                <li><span>文件地址</span><a class="ico ico-delete"></a></li>
+                <li><span>文件地址</span><a class="ico ico-delete"></a></li>
+                <li><span>文件地址</span><a class="ico ico-delete"></a></li>
+            </ul>
+            <a class="btn shadow" onclick="onAddGoal()"><i class="ico ico-document-add"></i><span>添加</span></a>
+        </div>
+        <div class="log">
+            <textarea id="log-output" readonly></textarea>
+        </div>
+        <div class="col center">
+            <u></u>
+            <div class="btn-flex">
+                <a id="preview-button" class="btn btn-green shadow" onclick="onPreview()"><i class="ico ico-visibility"></i><span>预览</span></a>
+                <a id="sync-button" class="btn shadow" onclick="onSync()"><i class="ico ico-angle-loop-place"></i><span>同步</span></a>
+            </div>
+        </div>
+    </section>
+</section>
+
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>

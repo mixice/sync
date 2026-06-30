@@ -1,0 +1,61 @@
+/* frame */
+::-webkit-scrollbar {width: 0;}
+.subject {display: flex;height: 100vh;padding: 10px;}
+.contant {flex: 1;height: 100%;border-radius: 20px 0 0 20px;padding: 10px;display: flex;flex-direction: column;}
+.sider {width: 25%;min-width: 300px;max-width: 400px;height: 100%;padding: 10px;display: flex;flex-direction: column;}
+
+/* btn */
+.btn {border-radius: 100px;white-space: nowrap;}
+.btn i {font-size: 18px;}
+.btn-red, .btn-red::after {background-color: var(--red);}
+.btn-green, .btn-green::after {background-color: var(--green);}
+.btn-flex .btn:not(:last-child) {margin-right: 10px;}
+
+/* form */
+.form {margin: -5px -5px 20px -5px;
+    li {
+        span {white-space: nowrap;}
+        choice {border-radius: 100px;width: 150px;}
+        input {padding: 0 20px;border-radius: 100px;flex: 1;
+            &.time {width: 80px;flex: none;text-align: center;padding: 0;}
+        }
+    }
+}
+
+/* list */
+.list {flex: 1;
+    li {display: flex;align-items: center;padding: 10px;cursor: pointer;border: 0;border-radius: 100px;
+        &.active {background-color: var(--f7);}
+        span {flex: 1;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;padding: 0 5px;}
+        a {width: 30px;height: 30px;display: flex;justify-content: center;align-items: center;border-radius: 100%;margin-left: 5px;
+            &:hover {background-color: var(--eee);}
+        }
+    }
+}
+
+/* goal */
+.goal {margin-bottom: 20px;
+    ul {border: 1px var(--eee) solid;border-radius: 30px;padding: 10px;margin-bottom: 10px;height: 240px;overflow: auto;
+        li {display: flex;align-items: center;padding: 5px;border-radius: 100px;transition-duration: .3s;
+            &:hover {background-color: var(--f7);}
+            span {flex: 1;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;padding: 0 10px;}
+            .ico-delete {color: var(--red);border-radius: 100%;width: 35px;height: 35px;display: flex;justify-content: center;align-items: center;
+                &:hover {background-color: var(--eee);}
+            }
+        }
+    }
+    .btn {width: 150px;}
+}
+
+/* log */
+.log {margin-bottom: 20px;flex: 1;
+    textarea {border-radius: 30px;padding: 20px;height: 100%;font-size: 12px;}
+}
+
+/* col */
+.col .btn-flex {min-width: 300px;}
+
+
+
+
+

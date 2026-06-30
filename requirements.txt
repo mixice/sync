@@ -1,0 +1,4 @@
+# SyncTool 依赖
+watchdog>=6.0
+eel>=0.16
+pyinstaller>=6.0
